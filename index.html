@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Multi Row Checkbox Menu</title>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+	<link rel="stylesheet" href="css/easy.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="css/screen.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="css/multirow-checkbox-menu.css" type="text/css" media="all" />
+	
+	<script language="javascript">
+		
+		$(document).ready(function() {
+			
+			
+			$('div.multiRowCheckboxMenu a.menu').click(function() {
+				if($('div.multiRowCheckboxMenu').hasClass('down')) {
+					$('div.multiRowCheckboxMenu').removeClass('down');
+					$('div.multiRowCheckboxMenu ul').hide();
+				} else {
+					$('div.multiRowCheckboxMenu').addClass('down');
+					$('div.multiRowCheckboxMenu ul').show();
+				}
+				
+			});
+		
+			
+		});
+	</script>
+</head>
+<body>
+	
+	<table>
+		<tr>
+			<th>
+				
+				<div class="multiRowCheckboxMenu">
+					<label for="selectAll"><input type="checkbox" class="selectAll semiSelect" id="selectAll" /></label>
+					<a href="#" class="menu">Menu</a>
+					<ul>
+						<li><a href="#delete">Delete</a></li>
+						<li><a href="#merge">Merge</a></li>
+					</ul>
+				</div>
+
+							
+			</th>
+			<th>Name</th>
+		</tr>
+		<tr>
+			<td><input type="checkbox" name="name[]" /></td>
+			<td>Tom</td>
+		</tr>
+		<tr>
+			<td><input type="checkbox" name="name[]" /></td>
+			<td>Christos</td>
+		</tr>	
+		<tr>
+			<td><input type="checkbox" name="name[]" /></td>
+			<td>Mark</td>
+		</tr>
+		<tr>
+			<td><input type="checkbox" name="name[]" /></td>
+			<td>Nigel</td>
+		</tr>
+	</table>
+	
+</body>
+</html>

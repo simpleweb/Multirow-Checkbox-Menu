@@ -1,0 +1,77 @@
+div.multiRowCheckboxMenu {
+	-moz-border-radius:3px 3px 3px 3px;
+	-webkit-border-radius:3px 3px 3px 3px;
+	background:-moz-linear-gradient(center top , #F9F9F9, #E3E3E3) repeat scroll 0 0 transparent;
+	border-color:#CCCCCC #BBBBBB #A0A0A0;
+	border-left:1px solid #BBBBBB;
+	border-right:1px solid #BBBBBB;
+	border-style:solid;
+	border-width:1px;
+	color:#000000;
+	cursor:default;
+	margin:0 8px 0 0;
+	outline:medium none;
+	padding:4px 8px 8px 8px;
+	text-align:left;
+	vertical-align:middle;
+	white-space:nowrap;
+	width: 35px;
+	position: relative;
+}
+
+div.multiRowCheckboxMenu.down {
+	background:-moz-linear-gradient(center top , #E3E3E3, #ccc) repeat scroll 0 0 transparent;
+}
+
+div.multiRowCheckboxMenu label {
+	float: left;
+}
+
+div.multiRowCheckboxMenu input.selectAll.semiSelect {
+	opacity: 0.5;
+	height: 19px;
+}
+
+div.multiRowCheckboxMenu a.menu {
+	text-indent: -999px;
+	display: block;
+	height: 16px;
+	width: 16px;
+	background: url(../img/multirow-checkbox-menu/downarrow.png) no-repeat 3px 4px;
+	margin-left:20px;
+	outline: none;
+}
+
+div.multiRowCheckboxMenu ul {
+	background-color:#FFFFFF;
+	border:1px solid #CCCCCC;
+	left:0;
+	list-style:none outside none;
+	margin:0;
+	position:absolute;
+	top:24px;
+	display: none;
+}
+
+div.multiRowCheckboxMenu ul li{
+	padding: 0;
+	margin: 2px;
+	font-size: 14px;
+	padding: 5px;
+}
+
+div.multiRowCheckboxMenu ul li:hover {
+	background-color: #3470A6;
+	cursor: pointer;
+}
+
+div.multiRowCheckboxMenu ul li a {
+	text-decoration: none;
+	color: #000;
+	outline: none;
+	height: 20px;
+}
+
+div.multiRowCheckboxMenu ul li:hover a {
+	color: #fff;
+}
