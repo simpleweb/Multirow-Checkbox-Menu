@@ -11,12 +11,13 @@ div.multiRowCheckboxMenu {
 	cursor:default;
 	margin:0 8px 0 0;
 	outline:medium none;
-	padding:4px 8px 8px 8px;
+	padding:4px 8px 4px 8px;
 	text-align:left;
 	vertical-align:middle;
 	white-space:nowrap;
-	width: 35px;
 	position: relative;
+	float: left;
+	height: 1%;
 }
 
 div.multiRowCheckboxMenu.down {
@@ -25,6 +26,8 @@ div.multiRowCheckboxMenu.down {
 
 div.multiRowCheckboxMenu label {
 	float: left;
+	height: 1%;
+	margin: 0;
 }
 
 div.multiRowCheckboxMenu input.selectAll.semiSelect {
@@ -38,8 +41,9 @@ div.multiRowCheckboxMenu a.menu {
 	height: 16px;
 	width: 16px;
 	background: url(../img/multirow-checkbox-menu/downarrow.png) no-repeat 3px 4px;
-	margin-left:20px;
 	outline: none;
+	height: 1%;
+	margin: 0 0 0 20px;
 }
 
 div.multiRowCheckboxMenu ul {
