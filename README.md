@@ -31,7 +31,7 @@ If you ID or class the submit buttons inside the container, those IDs/classes wi
 Background
 ----------
 
-This plugin was built for our fabulous ContactZilla product! http://contactzilla.com/
+This plugin was built for our fabulous ContactZilla product! [http://contactzilla.com/](http://contactzilla.com/)
 
 [Example](http://simpleweb.github.com/Multirow-Checkbox-Menu/)
 
