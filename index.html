@@ -5,67 +5,69 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>Multi Row Checkbox Menu</title>
-	<link rel="stylesheet" href="css/easy.css" type="text/css" media="all" />
+	
 	<link rel="stylesheet" href="css/screen.css" type="text/css" media="all" />
 	<link rel="stylesheet" href="css/multirow-checkbox-menu.css" type="text/css" media="all" />
 	
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.multirowcheckboxmenu.js"></script>
 	<script type="text/javascript">
 		
 		$(document).ready(function() {
 			
-			
-			$('div.multiRowCheckboxMenu a.menu').click(function() {
-				if($('div.multiRowCheckboxMenu').hasClass('down')) {
-					$('div.multiRowCheckboxMenu').removeClass('down');
-					$('div.multiRowCheckboxMenu ul').hide();
-				} else {
-					$('div.multiRowCheckboxMenu').addClass('down');
-					$('div.multiRowCheckboxMenu ul').show();
-				}
-				return false;
-			});
-		
+			$('div.multiRowCheckboxMenu').checkboxMenu({
+				menuItemClick: function(text, count) { 
+					return confirm('Are you sure you want to ' + text + ' the selected ' + count + ' item(s)?');
+				}});
 			
 		});
 	</script>
 </head>
 <body>
 	
-	<table>
-		<tr>
-			<th>
+	<form action="postback.php" method="post">
+		<table>
+			<tr>
+				<th>
 				
-				<div class="multiRowCheckboxMenu">
-					<label for="selectAll"><input type="checkbox" class="selectAll semiSelect" id="selectAll" /></label>
-					<a href="#" class="menu">Menu</a>
-					<ul>
-						<li><a href="#delete">Delete</a></li>
-						<li><a href="#merge">Merge</a></li>
-					</ul>
-				</div>
+					<!--
+					Markup will end up looking like this:
+					<div class="multiRowCheckboxMenu">
+						<label for="selectAll"><input type="checkbox" class="selectAll semiSelect" id="selectAll" /></label>
+						<a href="#" class="menu">Menu</a>
+						<ul>
+							<li><a href="#delete">Delete</a></li>
+							<li><a href="#merge">Merge</a></li>
+						</ul>
+					</div>
+					-->
 
+					<div class="multiRowCheckboxMenu">
+						<input id="deleteAction" class="actionItem" type="submit" name="action" value="Delete" />
+						<input id="mergeAction" class="actionItem" type="submit" name="action" value="Merge" />
+					</div>
 							
-			</th>
-			<th>Name</th>
-		</tr>
-		<tr>
-			<td><input type="checkbox" name="name[]" /></td>
-			<td>Tom</td>
-		</tr>
-		<tr>
-			<td><input type="checkbox" name="name[]" /></td>
-			<td>Christos</td>
-		</tr>	
-		<tr>
-			<td><input type="checkbox" name="name[]" /></td>
-			<td>Mark</td>
-		</tr>
-		<tr>
-			<td><input type="checkbox" name="name[]" /></td>
-			<td>Nigel</td>
-		</tr>
-	</table>
+				</th>
+				<th>Name</th>
+			</tr>
+			<tr>
+				<td><input type="checkbox" name="name[]" /></td>
+				<td>Tom</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" name="name[]" /></td>
+				<td>Christos</td>
+			</tr>	
+			<tr>
+				<td><input type="checkbox" name="name[]" /></td>
+				<td>Mark</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" name="name[]" /></td>
+				<td>Nigel</td>
+			</tr>
+		</table>
+	</form>
 	
 </body>
 </html>

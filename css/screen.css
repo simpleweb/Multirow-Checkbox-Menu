@@ -1,4 +1,16 @@
+body {
+	font-family: arial, verdana;
+	font-size: 14px;
+	font-weight: normal;
+}
+
+table{border-collapse:collapse;}
+th, td{padding:.5em 1em;line-height:1.5em;margin:0;}		
+th{background:#eee;}
+td{border-bottom:1px solid #eee;}
+
 table {
 	width: 200px;
 	margin: 20px;
 }
+
