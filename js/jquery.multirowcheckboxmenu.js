@@ -1,3 +1,15 @@
+/*
+ * jQuery Plugin: Multi Row Checkbox Menu
+ * Version 1.0
+ *
+ * Copyright (c) 2010 Tom Holder Simpleweb Ltd (http://simpleweb.co.uk)
+ * Licensed jointly under the GPL and MIT licenses,
+ * choose which one suits your project best!
+ *	
+ * Built for our product ContactZilla (http://contactzilla.com/) - check it out!
+ * 
+ * Please feel free to use this code in your projects, just respect the license and retain this header.
+ */
 (function($){
 	function log() {
 		if (window.console && console.log) {
