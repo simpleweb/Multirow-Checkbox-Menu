@@ -31,7 +31,7 @@ If you ID or class the submit buttons inside the container, those IDs/classes wi
 Background
 ----------
 
-This plugin was built for our fabulous ContactZilla product! ([http://contactzilla.com/]())
+This plugin was built for our fabulous ContactZilla product! http://contactzilla.com/
 
 [Example](http://simpleweb.github.com/Multirow-Checkbox-Menu/)
 
@@ -39,4 +39,4 @@ License
 -------
 This plugin is licensed under both the GPL and MIT licenses. Choose which ever one suits your project best.
 
-![ContactZilla.com](http://github.com/simpleweb/jQuery-Multi-Row-Input/raw/master/contactzilla.png)
+[![ContactZilla.com](http://github.com/simpleweb/jQuery-Multi-Row-Input/raw/master/contactzilla.png)](http://contactzilla.com/)
