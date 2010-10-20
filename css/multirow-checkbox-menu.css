@@ -42,6 +42,11 @@ div.multiRowCheckboxMenu input.selectAll.semiSelect {
 	opacity: 0.5;
 }
 
+div.multiRowCheckboxMenu span.selectedItem {
+    float:left;
+    margin:1px 5px;
+}
+
 div.multiRowCheckboxMenu a.menu {
 	text-indent: -999px;
 	display: block;
@@ -50,7 +55,7 @@ div.multiRowCheckboxMenu a.menu {
 	background: url(../img/multirow-checkbox-menu/downarrow.png) no-repeat 3px 4px;
 	outline: none;
 	height: 1%;
-	margin: 0 0 0 20px;
+        float: right;
 }
 
 div.multiRowCheckboxMenu ul {
@@ -63,6 +68,15 @@ div.multiRowCheckboxMenu ul {
 	top:25px;
 	display: none;
 	padding: 0;
+        z-index: 999;
+}
+
+div.multiRowCheckboxMenu ul.wide {
+    width: 300px;
+}
+
+div.multiRowCheckboxMenu ul.wide li {
+    float: left;
 }
 
 div.multiRowCheckboxMenu ul li{

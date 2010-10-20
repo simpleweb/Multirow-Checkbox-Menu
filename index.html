@@ -15,9 +15,15 @@
 		
 		$(document).ready(function() {
 			
-			$('div.multiRowCheckboxMenu').checkboxMenu({
+			$('div.menuSelectAll').checkboxMenu({
 				menuItemClick: function(text, count) { 
 					return confirm('Are you sure you want to ' + text + ' the selected ' + count + ' item(s)?');
+				}});
+
+
+                        $('div.menuAtoZFilter').checkboxMenu({menuClass: 'wide',
+				menuItemClick: function(text) {
+					return confirm('Ok to submit?');
 				}});
 			
 		});
@@ -27,7 +33,7 @@
 	
 	<form action="postback.php" method="post">
 		<table>
-			<tr>
+                    <tr>
 				<th>
 				
 					<!--
@@ -42,13 +48,36 @@
 					</div>
 					-->
 
-					<div class="multiRowCheckboxMenu">
-						<input id="deleteAction" class="actionItem" type="submit" name="action" value="Delete" />
-						<input id="mergeAction" class="actionItem" type="submit" name="action" value="Merge" />
+					<div class="menuSelectAll multiRowCheckboxMenu">
+                                            <input id="deleteAction" class="actionItem" type="submit" name="action" value="Delete" />
+                                            <input id="mergeAction" class="actionItem" type="submit" name="action" value="Merge" />
 					</div>
+
+                                        
 							
 				</th>
-				<th>Name</th>
+				<th>
+
+                                    <div class="menuAtoZFilter multiRowCheckboxMenu">
+                                        <input class="selected" type="submit" name="action" value="All" />
+                                        <input class="" type="submit" name="action" value="A" />
+                                        <input class="" type="submit" name="action" value="B" />
+                                        <input class="" type="submit" name="action" value="C" />
+                                        <input class="" type="submit" name="action" value="D" />
+                                        <input class="" type="submit" name="action" value="E" />
+                                        <input class="" type="submit" name="action" value="F" />
+                                        <input class="" type="submit" name="action" value="G" />
+                                        <input class="" type="submit" name="action" value="H" />
+                                        <input class="" type="submit" name="action" value="I" />
+                                        <input class="" type="submit" name="action" value="J" />
+                                        <input class="" type="submit" name="action" value="K" />
+                                        <input class="" type="submit" name="action" value="L" />
+                                        <input class="" type="submit" name="action" value="M" />
+                                        <input class="" type="submit" name="action" value="N" />
+                                        <input class="" type="submit" name="action" value="O" />
+                                        <input class="" type="submit" name="action" value="P" />
+                                    </div>
+                                </th>
 			</tr>
 			<tr>
 				<td><input type="checkbox" name="name[]" /></td>
