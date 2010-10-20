@@ -15,10 +15,10 @@ First include the `jquery.multirowcheckboxmenu.js` file in your page.
 
 Markup your menus as follows:
 
-<div class="multiRowCheckboxMenu">
-	<input type="submit" name="Delete" value="Delete" />
-	<input type="submit" name="Merge" value="Merge" />
-</div>
+    <div class="multiRowCheckboxMenu">
+        <input type="submit" name="Delete" value="Delete" />
+        <input type="submit" name="Merge" value="Merge" />
+    </div>
 
 You will notice the markup just contains form submit buttons. This is so the functionality degrades without javascript. If Javascript is enabled, each submit input will be replaced with an element in the menu drop down. The form will be submitted with the same named action value.
 
