@@ -116,6 +116,7 @@
 
                                                 //Hide any other menus from the same plugin that might not be hidden.
                                                 $('.jquery-multirow-checkbox-menu').hide();
+                                                $('.jquery-multirow-checkbox-menu-container').removeClass(opts.downClass);
 						dropdownMenu.toggle();
 						checkboxMenuContainer.toggleClass(opts.downClass);
 
