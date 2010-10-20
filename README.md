@@ -28,6 +28,8 @@ Then apply the multirowcheckbox plugin to the container:
 
 If you ID or class the submit buttons inside the container, those IDs/classes will get passed over to the LIs to provide more styling control.
 
+The plugin can also be used as a simple filter menu without the checkbox for things such as Sort Alphabetically, Filter by Letter etc. To do this, you must just have a input item with a class of selected.  See index.html for example.
+
 Background
 ----------
 
