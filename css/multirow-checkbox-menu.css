@@ -48,7 +48,7 @@ div.multiRowCheckboxMenu span.selectedItem {
 }
 
 div.multiRowCheckboxMenu a.menu {
-	text-indent: -999px;
+	text-indent: -9999px;
 	display: block;
 	height: 16px;
 	width: 16px;
