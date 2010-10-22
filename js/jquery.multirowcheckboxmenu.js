@@ -26,7 +26,7 @@
 			checkboxClasses: "selectAll",
 			semiSelectClass: "semiSelect",
 			menuClass: "",
-                        menuLinkClass: "menu",
+            menuLinkClass: "menu",
 			downClass: "down",
 			childCheckboxes: "input[type=checkbox]",
                         removeSelectedItem: true,
@@ -115,8 +115,8 @@
 					.click(function() {
 
                                                 //Hide any other menus from the same plugin that might not be hidden.
-                                                $('.jquery-multirow-checkbox-menu').hide();
-                                                $('.jquery-multirow-checkbox-menu-container').removeClass(opts.downClass);
+                                                $('.jquery-multirow-checkbox-menu').not(dropdownMenu).hide();
+                                                $('.jquery-multirow-checkbox-menu-container').not(checkboxMenuContainer).removeClass(opts.downClass);
 						dropdownMenu.toggle();
 						checkboxMenuContainer.toggleClass(opts.downClass);
 
