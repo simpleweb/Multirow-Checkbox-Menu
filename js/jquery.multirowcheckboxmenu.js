@@ -81,6 +81,9 @@
 
                                                             if(clickReturn) {
 
+                                                                    //Hide menus on submit, makes it feel like something has happened on click.
+                                                                    $('.jquery-multirow-checkbox-menu').hide();
+
                                                                     //Put hidden element in to the form that will provide the same value as if the button had been pushed.
                                                                     var hiddenVal = $('<input>').attr('type','hidden')
                                                                                                                     .attr('name', submitButton.attr('name'))
