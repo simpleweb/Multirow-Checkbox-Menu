@@ -142,7 +142,7 @@
 
                             //Label around the checkbox.
                             var checkboxLabel = $('<label>').attr('for', opts.checkboxIDPrefix + containerCount)
-									.insertBefore(menuLink);
+									.prependTo(checkboxMenuContainer);
 
                             //The select all checkbox.
                             var checkboxSelectAll = $('<input>').attr('id',opts.checkboxIDPrefix + containerCount)
