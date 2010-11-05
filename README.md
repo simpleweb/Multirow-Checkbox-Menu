@@ -33,6 +33,8 @@ The plugin can also be used as a simple filter menu without the checkbox for thi
 Background
 ----------
 
+[Blog post on ok-cool.com](http://www.ok-cool.com/posts/read/475-select-allselect-none-checkbox-menu-plugin-for-jquery/)
+
 This plugin was built for our fabulous ContactZilla product! [http://contactzilla.com/](http://contactzilla.com/)
 
 [Example](http://simpleweb.github.com/Multirow-Checkbox-Menu/)
