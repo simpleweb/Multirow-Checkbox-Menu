@@ -17,7 +17,7 @@
         console.log(arguments[i]);
       }
     }
-  };
+  }
   $.fn.checkboxMenu = function(options) {
 
     var defaults = {
@@ -167,14 +167,14 @@
         //Attach event to all child boxes which will set the semi-selected transparency on the main check box.
         $(opts.childCheckboxes).not(checkboxSelectAll).click(function() {
 
-          if($(opts.childCheckboxes).filter(':checked').not(checkboxSelectAll).length != $(opts.childCheckboxes).not(checkboxSelectAll).length && $(opts.childCheckboxes).filter(':checked').not(checkboxSelectAll).length != 0) {
+          if($(opts.childCheckboxes).filter(':checked').not(checkboxSelectAll).length !== $(opts.childCheckboxes).not(checkboxSelectAll).length && $(opts.childCheckboxes).filter(':checked').not(checkboxSelectAll).length !== 0) {
             checkboxSelectAll.addClass(opts.semiSelectClass);
             checkboxSelectAll.attr('checked',true);
           } else {
             checkboxSelectAll.removeClass(opts.semiSelectClass);
 
             //If everything is checked, check the master as well.
-            if($(opts.childCheckboxes).filter(':checked').not(checkboxSelectAll).length != 0) {
+            if($(opts.childCheckboxes).filter(':checked').not(checkboxSelectAll).length !== 0) {
               checkboxSelectAll.attr('checked',true);
             } else {
               checkboxSelectAll.attr('checked',false);
