@@ -152,16 +152,23 @@
 
                             //Attach the event to the main checkbox that will toggle All/None selected check boxes.
                             checkboxSelectAll.click(function() {
+	
+								/**
+								 * in 1.3.2 jQuery, the checkboxes do not change to checked="checked" yet they are checked
+								 * after 1.6.1 jQuery, the checkboxes actually do change to checked="checked", so we need to circumvent this by changing all
+								 * the .attr to .prop for checked
+								**/
 
                                 //If the item is semi selected then when we click, always turn it on.
                                 if(checkboxSelectAll.hasClass(opts.semiSelectClass)) {
-                                    checkboxSelectAll.attr('checked',true);
+                                    checkboxSelectAll.prop('checked',true);
                                 }
 
                                 $(opts.childCheckboxes).each(function() {
-                                        $(this).attr('checked', checkboxSelectAll.attr('checked'));
+                                        $(this).prop('checked', checkboxSelectAll.prop('checked'));
                                 });
                                 checkboxSelectAll.removeClass(opts.semiSelectClass);
+								
                             });
 
                             //Attach event to all child boxes which will set the semi-selected transparency on the main check box.
@@ -169,15 +176,15 @@
 
                                     if($(opts.childCheckboxes).filter(':checked').not(checkboxSelectAll).length != $(opts.childCheckboxes).not(checkboxSelectAll).length && $(opts.childCheckboxes).filter(':checked').not(checkboxSelectAll).length != 0) {
                                             checkboxSelectAll.addClass(opts.semiSelectClass);
-                                            checkboxSelectAll.attr('checked',true);
+                                            checkboxSelectAll.prop('checked',true);
                                     } else {
                                             checkboxSelectAll.removeClass(opts.semiSelectClass);
 
                                             //If everything is checked, check the master as well.
                                             if($(opts.childCheckboxes).filter(':checked').not(checkboxSelectAll).length != 0) {
-                                                    checkboxSelectAll.attr('checked',true);
+                                                    checkboxSelectAll.prop('checked',true);
                                             } else {
-                                                checkboxSelectAll.attr('checked',false);
+                                                checkboxSelectAll.prop('checked',false);
                                             }
                                     }
 
